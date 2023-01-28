@@ -19,7 +19,7 @@
                 <td>{{$project->slug}}</td>
                 <td>{{$project->client}}</td>
                 <td>
-                  <a href="{{route('admin.projects.show', $project)}}" class="btn btn-primary">Espandi</a>
+                  <a href="{{route('admin.projects.show', $project->slug)}}" class="btn btn-primary">Espandi</a>
                 </td>
             </tr>
             @endforeach

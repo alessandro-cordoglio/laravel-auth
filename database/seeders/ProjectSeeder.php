@@ -20,7 +20,7 @@ class ProjectSeeder extends Seeder
         //elimina tutti i dati all'interno della tabella
         Project::truncate();
 
-        //inserisce dati finti (5 colonne) 
+        //inserisce dati finti (5 righe) 
         for($i= 0; $i < 5 ; $i++) { 
             $new_project= new Project;
             $new_project->title = $faker->sentence(3);
