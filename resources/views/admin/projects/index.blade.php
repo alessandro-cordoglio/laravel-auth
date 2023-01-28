@@ -8,7 +8,7 @@
             <th scope="col">Titolo</th>
             <th scope="col">Slug</th>
             <th scope="col">Cliente</th>
-            <th scope="col">placeholder</th>
+            <th scope="col">Azioni</th>
           </tr>
         </thead>
         <tbody>
@@ -18,6 +18,9 @@
                 <td>{{$project->title}}</td>
                 <td>{{$project->slug}}</td>
                 <td>{{$project->client}}</td>
+                <td>
+                  <a href="{{route('admin.projects.show', $project)}}" class="btn btn-primary">Espandi</a>
+                </td>
             </tr>
             @endforeach
           
