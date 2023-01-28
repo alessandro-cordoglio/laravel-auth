@@ -18,7 +18,7 @@ class ProjectSeeder extends Seeder
     public function run(Faker $faker)
     {
         //elimina tutti i dati all'interno della tabella
-        Project::truncate();
+        /* Project::truncate(); */
 
         //inserisce dati finti (5 righe) 
         for($i= 0; $i < 5 ; $i++) { 

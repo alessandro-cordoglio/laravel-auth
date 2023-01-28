@@ -18,8 +18,9 @@
                 <td>{{$project->title}}</td>
                 <td>{{$project->slug}}</td>
                 <td>{{$project->client}}</td>
-                <td>
+                <td class="d-flex">
                   <a href="{{route('admin.projects.show', $project->slug)}}" class="btn btn-primary">Espandi</a>
+                  <a href="{{route('admin.projects.edit', $project->slug)}}" class="mx-2 btn btn-success">Modifica</a>
                   <form action="{{route('admin.projects.destroy', $project)}}" method="POST">
                     @csrf
                     @method('DELETE')
