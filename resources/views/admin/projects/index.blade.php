@@ -20,10 +20,15 @@
                 <td>{{$project->client}}</td>
                 <td>
                   <a href="{{route('admin.projects.show', $project->slug)}}" class="btn btn-primary">Espandi</a>
+                  <form action="{{route('admin.projects.destroy', $project)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Elimina</button>
+                  </form>
                 </td>
             </tr>
             @endforeach
-          
         </tbody>
+        <a href="{{route('admin.projects.create')}}" class="btn btn-secondary">Crea nuovo progetto</a>
       </table>
 @endsection
