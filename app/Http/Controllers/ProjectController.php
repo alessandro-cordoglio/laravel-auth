@@ -85,6 +85,9 @@ class ProjectController extends Controller
     {
         $data=$request->validated();
 
+        $project->title = $data['title'];
+        $project->client = $data['client'];
+        $project->description = $data['description'];
         $project->slug = Str::slug($data['title']);
         $project->update();
 
